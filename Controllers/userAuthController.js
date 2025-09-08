@@ -27,7 +27,7 @@ exports.signup = async (req,res) => {
         if (existingUser) {
             return res.status(400).json({success: false, message : "User already exist"})
         }
-        if (!name, !email,!password) {
+        if (!name || !email || !password) {
             return res.status(400).json({message: "Please provide all credentials"})
         }
         const hashedPassword = await bcrypt.hash(password, 10)
