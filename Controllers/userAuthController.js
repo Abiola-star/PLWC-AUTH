@@ -6,7 +6,7 @@ const {sendWelcomeEmail} = require("../utils/sendMail")
 
 const generateToken = ({userId, email, name})=>{
    return jwt.sign({id: userId, email, name}, process.env.JWT_SECRET,{
-        expiresIn: "15m ",
+        expiresIn: "15m",
     })
 
 }
