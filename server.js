@@ -9,7 +9,10 @@ const userRoutes = require("./routes/userRoutes")
 dotenv.config()
 //middlewares
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: "https://product-list-with-cart-pearl-nine.vercel.app/",
+    credentials: true
+}))
 
 
 app.get("/", (req,res)=>{
