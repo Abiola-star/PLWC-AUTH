@@ -10,9 +10,10 @@ dotenv.config()
 //middlewares
 app.use(express.json())
 app.use(cors({
-    origin: "https://product-list-with-cart-pearl-nine.vercel.app/",
-    credentials: true
-}))
+  origin: 'https://product-list-with-cart-pearl-nine.vercel.app',
+  credentials: true
+}));
+
 
 
 app.get("/", (req,res)=>{
