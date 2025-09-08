@@ -4,7 +4,7 @@ const app = express()
 const mongoose = require("mongoose")
 const cors = require("cors")
 const PORT = 5000
-const userRoutes = require("../PLWC AUTH/routes/userRoutes")
+const userRoutes = require("./routes/userRoutes")
 
 dotenv.config()
 //middlewares
